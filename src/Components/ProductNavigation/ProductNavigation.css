@@ -1,0 +1,17 @@
+.main-nav li {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  .main-nav a {
+    display: block;
+    background: #051c33;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+  }
+  
+  .main-nav .active,
+  .main-nav a:hover {
+    background-color: #051c33;
+  }

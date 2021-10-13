@@ -1,0 +1,13 @@
+.search-form {
+    max-width: 460px;
+    display: flex;
+    margin: 0 auto 32px;
+  }
+  
+  .search-form button {
+    outline: none;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 0 0.35em 0.35em 0;
+    cursor: pointer;
+  }
