@@ -19,7 +19,7 @@ function HomeView(props ) {
                 <Header />
             </Row>
             <Row>
-                <h1>Selecione os Produtos</h1>
+                <h1>Lista de Produtos</h1>
             </Row>
             <Row className="App">
             {/* <Col lg="4" xl="4" md="12" sm="12" xs="12"> */}

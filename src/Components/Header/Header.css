@@ -3,5 +3,6 @@
     padding: 40px;
     font-weight: bold;
     font-size: 40px;
-    background-color: #1a8382;
+    /* background-color: #1a8382; */
+    background: linear-gradient(to right, #1a8382, #4776e6);
 }

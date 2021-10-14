@@ -10,7 +10,8 @@
     width: 220px;
     height: 165px;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
   
   .photo-container ul img {
@@ -25,4 +26,10 @@
   
   .photo-container .not-found {
     width: 100%;
+  }
+
+  span{
+   padding: 2px;
+   font-size: 18px;
+    
   }
