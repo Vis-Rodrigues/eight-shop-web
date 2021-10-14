@@ -3,19 +3,13 @@ import './Home.css';
 
 //Importa os componentes do Bootstrap
 import { Container, Row, Col } from 'react-bootstrap';
-
-//Importa os componentes
-// import BusLineArriveController from '../../Components/BusLineArrive/BusLineArriveController';
-// import BusPositionController from '../../Components/BusPosition/BusPositionController';
 import Header from '../../Components/Header/Header';
-// import Menu from '../../Components/Menu/Menu';
 import Footer from '../../Components/Footer/Footer';
 
 import PhotoContextProvider from "../../context/PhotoContext";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
-import HeaderCopy from "../../Components/HeaderCopy";
-import Item from "../../Components/Image/Item";
-import Search from "../../Components/Search";
+import HeaderCopy from "../../Components/SearchProduct/ProductSearchController";
+import Item from "../../Components/ProductImage/Item";
 import NotFound from "../../Components/NotFound/NotFound";
 
 function HomeView(props ) {
@@ -24,10 +18,13 @@ function HomeView(props ) {
             <Row>
                 <Header />
             </Row>
+            <Row>
+                <h1>Selecione os Produtos</h1>
+            </Row>
             <Row className="App">
             {/* <Col lg="4" xl="4" md="12" sm="12" xs="12"> */}
                 <PhotoContextProvider>
-                    <HashRouter basename="/SnapScout">
+                    <HashRouter basename="/eightshop">
                     <div className="container">
                         <Route
                         render={props => (
@@ -41,20 +38,19 @@ function HomeView(props ) {
                         <Route
                             exact
                             path="/"
-                            render={() => <Redirect to="/mountain" />}
+                            render={() => <Redirect to="/vegano" />}
                         />
 
                         <Route
-                            path="/mountain"
-                            render={() => <Item searchTerm="mountain" />}
+                            path="/vegano"
+                            render={() => <Item searchTerm="vegano" />}
                         />
-                        <Route path="/beach" render={() => <Item searchTerm="beach" />} />
-                        <Route path="/bird" render={() => <Item searchTerm="bird" />} />
-                        <Route path="/food" render={() => <Item searchTerm="food" />} />
+                        <Route path="/sem-gluten" render={() => <Item searchTerm="sem-gluten" />} />
+                        <Route path="/vegetariano" render={() => <Item searchTerm="bird" />} />
                         <Route
                             path="/search/:searchInput"
                             render={props => (
-                            <Search searchTerm={props.match.params.searchInput} />
+                            <Item searchTerm={props.match.params.searchInput} />
                             )}
                         />
                         <Route component={NotFound} />

@@ -19,16 +19,10 @@ code {
   color: #3f4850;
 } */
 
-h2 {
-  font-size: 2em;
+p {
+  font-size: 8em;
   margin: 52px 0 40px;
   text-transform: capitalize;
-  color: #051c33;
-}
-
-h1 {
-  font-family: "Lobster", "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-size: 4em;
   color: #051c33;
 }
 
@@ -84,6 +78,7 @@ input {
 
 .not-found {
   padding-top: 5%;
+  padding-bottom: 15%;
 }
 
 @media only screen and (max-width: 767px) {

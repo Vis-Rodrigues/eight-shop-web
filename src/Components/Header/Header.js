@@ -11,21 +11,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 //Importa os Componentes do FontAwesome 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-//Importa a imagem que colocamos na pasta Assets que fica dentro da pasta src 
-import busImage from '../../Assets/busImage.jpg';
+
 
 //importa a função useSelector do React Redux
 // import { useSelector } from 'react-redux';
 
 const Header = () => {
 
-    //Busca o nome do usuário no módulo auth
-    // const userName = useSelector((state) => state.auth.userName);
 
-    let welcome = 'Olá, prof'
-    // if(userName !== ''){
-    //     welcome = "Bem Vindo, " + userName;
-    // }
     return (
         <Container fluid={true} className="ContainerHeader">
             <Row>

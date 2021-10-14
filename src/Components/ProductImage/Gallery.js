@@ -1,5 +1,5 @@
 import React from "react";
-import NoImages from "../NotFound/NoImages";
+import NotFound from "../NotFound/NotFound";
 import Image from "./Image";
 const Gallery = props => {
   const results = props.data;
@@ -17,7 +17,7 @@ const Gallery = props => {
       return <Image url={url} key={id} alt={title} />;
     });
   } else {
-    noImages = <NoImages />; // return 'not found' component if no images fetched
+    noImages = <NotFound />; // return 'not found' component if no images fetched
   }
   return (
     <div>

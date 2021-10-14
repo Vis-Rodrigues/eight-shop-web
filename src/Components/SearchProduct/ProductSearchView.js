@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import './SearchForm.css'
+import './ProductSearch.css'
 
-const Form = ({ handleSubmit, history }) => {
+const ProductSearchView = ({ handleSubmit, history }) => {
   const [searchEntry, setSearchEntry] = useState("");
   // update search text state
   const updateSearchInput = e => {
     setSearchEntry(e.target.value);
+  };
+  handleSubmit = (e, history, searchInput) => {
+    e.preventDefault();
+    e.currentTarget.reset();
+    let url = `/search/${searchInput}`;
+    history.push(url);
   };
   return (
     <form
@@ -15,7 +21,7 @@ const Form = ({ handleSubmit, history }) => {
       <input
         type="text"
         name="search"
-        placeholder="Search..."
+        placeholder="Pesquise por produto..."
         onChange={updateSearchInput}
         value={searchEntry}
       />
@@ -36,4 +42,4 @@ const Form = ({ handleSubmit, history }) => {
   );
 };
 
-export default Form;
+export default ProductSearchView;
