@@ -22,7 +22,9 @@ const ProductItemView = props => {
   }
   return (
     <div className="product-item">
-      <ul>{images}</ul>
+      <ul>
+       {images}
+      </ul>
       {noImages}
     </div>
   );

@@ -1,4 +1,4 @@
-.product-item ul {
+  .product-item ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -19,13 +19,17 @@
     transform: scale(1.25);
     transition: transform 1.25s;
   }
+
+  .product-item-img {
+    width: 220px;
+    height: 165px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
   
   .product-item li:hover img {
     transform: scale(1.65);
-  }
-  
-  .product-item .not-found {
-    width: 100%;
   }
 
   span{
