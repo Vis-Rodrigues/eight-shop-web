@@ -1,21 +1,19 @@
 import React, { useContext, useEffect } from "react";
 import { PhotoContext } from "../../context/PhotoContext";
-import Gallery from "./Gallery";
+import ProductItemView from "./ProductItemView";
 import Loader from "../Loader/Loader";
-import './Container.css';
 
-const Container = ({ searchTerm }) => {
+const ProductItemController = ({ searchTerm }) => {
   const { images, loading, runSearch } = useContext(PhotoContext);
   useEffect(() => {
     runSearch(searchTerm);
-    // eslint-disable-next-line
   }, [searchTerm]);
   
   return (
-    <div className="photo-container">
-      {loading ? <Loader /> : <Gallery data={images} />}
+    <div>
+      {loading ? <Loader /> : <ProductItemView data={images} />}
     </div>
   );
 };
 
-export default Container;
+export default ProductItemController;

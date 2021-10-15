@@ -1,7 +1,7 @@
 import React from "react";
 import NotFound from "../NotFound/NotFound";
 import Image from "./Image";
-const Gallery = props => {
+const ProductItemView = props => {
   const results = props.data;
   let images;
   let noImages;
@@ -21,11 +21,11 @@ const Gallery = props => {
     noImages = <NotFound />; // return 'not found' component if no images fetched
   }
   return (
-    <div>
+    <div className="product-item">
       <ul>{images}</ul>
       {noImages}
     </div>
   );
 };
 
-export default Gallery;
+export default ProductItemView;

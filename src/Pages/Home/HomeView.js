@@ -9,8 +9,8 @@ import Footer from '../../Components/Footer/Footer';
 import PhotoContextProvider from "../../context/PhotoContext";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import HeaderCopy from "../../Components/SearchProduct/ProductSearchController";
-import Item from "../../Components/ProductImage/Item";
 import NotFound from "../../Components/NotFound/NotFound";
+import ProductItemController from '../../Components/ProductItem/ProductItemController';
 
 function HomeView(props ) {
     return (
@@ -43,14 +43,14 @@ function HomeView(props ) {
 
                         <Route
                             path="/vegano"
-                            render={() => <Item searchTerm="vegano" />}
+                            render={() => <ProductItemController searchTerm="vegano" />}
                         />
-                        <Route path="/sem-gluten" render={() => <Item searchTerm="sem-gluten" />} />
-                        <Route path="/vegetariano" render={() => <Item searchTerm="bird" />} />
+                        <Route path="/sem-gluten" render={() => <ProductItemController searchTerm="sem-gluten" />} />
+                        <Route path="/vegetariano" render={() => <ProductItemController searchTerm="vegetariano" />} />
                         <Route
                             path="/search/:searchInput"
                             render={props => (
-                            <Item searchTerm={props.match.params.searchInput} />
+                            <ProductItemController searchTerm={props.match.params.searchInput} />
                             )}
                         />
                         <Route component={NotFound} />

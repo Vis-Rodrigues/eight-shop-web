@@ -1,4 +1,4 @@
-.photo-container ul {
+.product-item ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     align-items: flex-start;
   }
   
-  .photo-container ul li {
+  .product-item ul li {
     width: 220px;
     height: 165px;
     overflow: hidden;
@@ -14,17 +14,17 @@
     margin-bottom: 5px;
   }
   
-  .photo-container ul img {
+  .product-item ul img {
     width: 100%;
     transform: scale(1.25);
     transition: transform 1.25s;
   }
   
-  .photo-container li:hover img {
+  .product-item li:hover img {
     transform: scale(1.65);
   }
   
-  .photo-container .not-found {
+  .product-item .not-found {
     width: 100%;
   }
 
