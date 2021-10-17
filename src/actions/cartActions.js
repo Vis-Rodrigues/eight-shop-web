@@ -3,7 +3,7 @@ import ApiEightShop from '../services/ApiEightShop';
 import {
     CART_ADD_ITEM,
     CART_REMOVE_ITEM,
-    CART_SAVE_PAYMENT_METHOD,
+    CART_REMOVE_ALL_ITEM,
     CART_SAVE_SHIPPING_ADDRESS,
 } from '../constants/cartConstants';
 
@@ -13,7 +13,7 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
     dispatch({
         type: CART_ADD_ITEM,
         payload: {
-            product: data._id,
+            product: data.id,
             name: data.name,
             image: data.imageUrl,
             price: data.price,
@@ -39,6 +39,16 @@ export const removeFromCart = (id) => (dispatch, getState) => {
         JSON.stringify(getState().cart.cartItems)
     );
 };
+
+export const clearCart = () => async (dispatch, getState) => {
+    dispatch({ type: CART_REMOVE_ALL_ITEM });
+    console.log('clearCart');
+    localStorage.setItem(
+        'cartItems',
+        JSON.stringify(getState().cart.cartItems)
+    );
+};
+
 
 // export const saveShippingAddress = (data) => (dispatch) => {
 //     dispatch({
