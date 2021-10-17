@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, Image, ListGroup, Form, Button, Card } from 'react-bootstrap';
 import Message from '../components/Message';
+import DialogController from '../components/Dialog/DialogController';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 
 const CartScreen = ({ match, history, location }) => {
@@ -32,12 +33,13 @@ const CartScreen = ({ match, history, location }) => {
             <Col md={8}>
                 <h1>Carrinho de compras</h1>
                 {cartItems.length === 0 ? (
-                    <Message>
-                        <h3 className='text-dark'>Ainda não possui item :(</h3>
-                        <Link className='btn btn-primary my-3' to='/'>
-                            Voltar
-                        </Link>
-                    </Message>
+                    // <Message>
+                    //     <h3 className='text-dark'>Ainda não possui item :(</h3>
+                    //     <Link className='btn btn-primary my-3' to='/'>
+                    //         Voltar
+                    //     </Link>
+                    // </Message>
+                    <DialogController />
                 ) : (
                     <ListGroup variant='flush'>
                         {cartItems.map((item) => (
