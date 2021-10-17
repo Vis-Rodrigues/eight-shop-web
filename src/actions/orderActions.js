@@ -22,13 +22,13 @@ export const createOrder = (order) => async (dispatch, getState) => {
         dispatch({ type: ORDER_CREATE_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 
@@ -54,12 +54,12 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
         dispatch({ type: ORDER_DETAILS_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 
@@ -86,13 +86,13 @@ export const payOrder =
             dispatch({ type: ORDER_PAY_REQUEST });
 
             const {
-                userLogin: { userInfo },
+                // userLogin: { userInfo },
             } = getState();
 
             const config = {
                 headers: {
                     'Content-type': 'application/json',
-                    Authorization: `Bearer ${userInfo.token}`,
+                    // Authorization: `Bearer ${userInfo.token}`,
                 },
             };
 
@@ -122,12 +122,12 @@ export const deliverOrder = (orderId) => async (dispatch, getState) => {
         dispatch({ type: ORDER_DELIVER_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 
@@ -157,12 +157,12 @@ export const listOrders = () => async (dispatch, getState) => {
         dispatch({ type: ORDER_LIST_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 

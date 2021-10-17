@@ -7,6 +7,8 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { createProductReview, listProductDetails } from '../actions/productActions';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
 const ProductScreen = ({ match, history }) => {
     const [qty, setQty] = useState(1);
@@ -21,8 +23,8 @@ const ProductScreen = ({ match, history }) => {
     const productReviewCreate = useSelector((state) => state.productReviewCreate);
     const { success: successProductReview, error: errorProductReview } = productReviewCreate;
 
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
+    // const userLogin = useSelector((state) => state.userLogin);
+    // const { userInfo } = userLogin;
 
     useEffect(() => {
         if (successProductReview) {
@@ -46,7 +48,7 @@ const ProductScreen = ({ match, history }) => {
     return (
         <>
             <Link className='btn btn-warning my-3' to='/'>
-                GO BACK
+                VOLTAR
             </Link>
             {loading ? (
                 <Loader />
@@ -56,7 +58,7 @@ const ProductScreen = ({ match, history }) => {
                 <>
                     <Row>
                         <Col md={6}>
-                            <Image src={product.image} alt={product.name} fluid />
+                            <Image src={product.urlImage} alt={product.name} fluid />
                         </Col>
                         <Col md={3}>
                             <ListGroup variant='flush'>
@@ -66,8 +68,8 @@ const ProductScreen = ({ match, history }) => {
                                 <ListGroup.Item>
                                     <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                                 </ListGroup.Item>
-                                <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
-                                <ListGroup.Item>Description: {product.description}</ListGroup.Item>
+                                <ListGroup.Item>Preço: R${product.price}</ListGroup.Item>
+                                <ListGroup.Item>Descrição: {product.description}</ListGroup.Item>
                             </ListGroup>
                         </Col>
                         <Col md={3}>
@@ -75,9 +77,9 @@ const ProductScreen = ({ match, history }) => {
                                 <ListGroup variant='flush'>
                                     <ListGroup.Item>
                                         <Row>
-                                            <Col>Price:</Col>
+                                            <Col>Preço:</Col>
                                             <Col>
-                                                <strong>₹{product.price}</strong>
+                                                <strong>R$ {product.price}</strong>
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>
@@ -114,7 +116,7 @@ const ProductScreen = ({ match, history }) => {
                                             type='button'
                                             disabled={product.countInStock === 0}
                                         >
-                                            ADD TO CART
+                                            <FontAwesomeIcon icon={faPlusCircle} /> Adicionar
                                         </Button>
                                     </ListGroup.Item>
                                 </ListGroup>
@@ -122,7 +124,7 @@ const ProductScreen = ({ match, history }) => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={6}>
+                        {/* <Col md={6}>
                             <h2>REVIEWS</h2>
                             <ListGroup variant='flush'>
                                 {product.reviews.length > 0 ? (
@@ -138,7 +140,8 @@ const ProductScreen = ({ match, history }) => {
                                     <Message variant='primary'>No reviews</Message>
                                 )}
                                 {errorProductReview && <Message variant='danger'>{errorProductReview}</Message>}
-                                {userInfo && (
+                                {//userInfo && 
+                                (
                                     <Form onSubmit={submitHandler}>
                                         <Form.Group controldId='rating'>
                                             <Form.Label>Rating</Form.Label>
@@ -168,7 +171,7 @@ const ProductScreen = ({ match, history }) => {
                                     </Form>
                                 )}
                             </ListGroup>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </>
             )}

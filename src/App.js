@@ -1,21 +1,21 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomeScreen from './screens/HomeScreen';
-import ProductScreen from './screens/ProductScreen';
-import CartScreen from './screens/CartScreen';
-import LoginScreen from './screens/LoginScreen';
-import RegisterScreen from './screens/RegisterScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import ShippingScreen from './screens/ShippingScreen';
-import PaymentScreen from './screens/PaymentScreen';
-import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import OrderScreen from './screens/OrderScreen';
-import UserListScreen from './screens/UserListScreen';
-import OrderListScreen from './screens/OrderListScreen';
-import ProductListScreen from './screens/ProductListScreen';
-import ProductEditScreen from './screens/ProductEditScreen';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import HomeScreen from './pages/HomeScreen';
+import ProductScreen from './pages/ProductScreen';
+import CartScreen from './pages/CartScreen';
+import LoginScreen from './pages/LoginScreen';
+import RegisterScreen from './pages/RegisterScreen';
+import ProfileScreen from './pages/ProfileScreen';
+import ShippingScreen from './pages/ShippingScreen';
+import PaymentScreen from './pages/PaymentScreen';
+import PlaceOrderScreen from './pages/PlaceOrderScreen';
+import OrderScreen from './pages/OrderScreen';
+import UserListScreen from './pages/UserListScreen';
+import OrderListScreen from './pages/OrderListScreen';
+import ProductListScreen from './pages/ProductListScreen';
+import ProductEditScreen from './pages/ProductEditScreen';
 
 const App = () => {
     return (

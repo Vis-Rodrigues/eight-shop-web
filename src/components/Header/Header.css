@@ -1,0 +1,18 @@
+.ContainerHeader {
+    background: linear-gradient(to right, #1a8382, #4776e6);
+    color: #ffffff;
+    /* padding: 40px; */
+}
+
+.TopHeader {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.TopHeaderRight {
+    color: #ffffff;
+    text-align: right;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+}
