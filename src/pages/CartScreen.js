@@ -47,30 +47,10 @@ const CartScreen = ({ match, history, location }) => {
                                         <Image src={item.image} alt={item.name} fluid rounded />
                                     </Col>
                                     <Col md={3}>
-                                        <Link
-                                            to={`/products/${item.product}`}
-                                            style={{ textDecoration: 'none' }}
-                                        >
                                             {item.name}
-                                        </Link>
                                     </Col>
-                                    <Col md={2}>₹{item.price}</Col>
-                                    <Col md={2}>
-                                        <Form.Control
-                                            as='select'
-                                            value={item.qty}
-                                            onChange={(e) =>
-                                                dispatch(
-                                                    addToCart(item.product, Number(e.target.value))
-                                                )
-                                            }
-                                        >
-                                            {[...Array(item.countInStock).keys()].map((x) => (
-                                                <option key={x + 1} value={x + 1}>
-                                                    {x + 1}
-                                                </option>
-                                            ))}
-                                        </Form.Control>
+                                    <Col md={2}>R$ {item.price}</Col>
+                                    <Col md={2}>{item.qty}
                                     </Col>
                                     <Col md={2}>
                                         <Button
@@ -95,7 +75,7 @@ const CartScreen = ({ match, history, location }) => {
                                 SUBTOTAL ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                                 ITEMS
                             </h2>
-                            ₹
+                            R$
                             {cartItems
                                 .reduce((acc, item) => acc + item.price * item.qty, 0)
                                 .toFixed(2)}

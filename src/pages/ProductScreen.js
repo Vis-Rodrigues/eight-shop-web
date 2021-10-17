@@ -86,10 +86,10 @@ const ProductScreen = ({ match, history }) => {
                                     <ListGroup.Item>
                                         <Row>
                                             <Col>Status:</Col>
-                                            <Col>{product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}</Col>
+                                            <Col>{product.countInStock > 0 ? 'Em estoque' : 'Indisponível'}</Col>
                                         </Row>
                                     </ListGroup.Item>
-                                    {product.countInStock > 0 && (
+                                    {/* {product.countInStock > 0 && (
                                         <ListGroup.Item>
                                             <Row>
                                                 <Col>Quantity:</Col>
@@ -108,7 +108,7 @@ const ProductScreen = ({ match, history }) => {
                                                 </Col>
                                             </Row>
                                         </ListGroup.Item>
-                                    )}
+                                    )} */}
                                     <ListGroup.Item className='d-grid'>
                                         <Button
                                             onClick={addToCartHandler}

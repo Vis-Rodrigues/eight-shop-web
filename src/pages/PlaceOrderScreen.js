@@ -105,8 +105,8 @@ const PlaceOrderScreen = ({ history }) => {
                                                         </Link>
                                                     </Col>
                                                     <Col md={4}>
-                                                        {item.qty} x ₹
-                                                        {item.price} = ₹
+                                                        {item.qty} x R$
+                                                        {item.price} = R$
                                                         {(
                                                             item.qty *
                                                             item.price
@@ -130,25 +130,25 @@ const PlaceOrderScreen = ({ history }) => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Items</Col>
-                                    <Col>₹{cart.itemsPrice}</Col>
+                                    <Col>R$ {cart.itemsPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Shipping</Col>
-                                    <Col>₹{cart.shippingPrice}</Col>
+                                    <Col>R$ {cart.shippingPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Tax</Col>
-                                    <Col>₹{cart.taxPrice}</Col>
+                                    <Col>R$ {cart.taxPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Total</Col>
-                                    <Col>₹{cart.totalPrice}</Col>
+                                    <Col>R$ {cart.totalPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
