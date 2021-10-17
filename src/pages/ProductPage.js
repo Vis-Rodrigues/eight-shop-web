@@ -5,7 +5,7 @@ import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
-import { createProductReview, listProductDetails } from '../actions/productActions';
+import { listProductDetails } from '../actions/productActions';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
@@ -35,11 +35,6 @@ const ProductPage = ({ match, history }) => {
 
     const addToCartHandler = () => {
         history.push(`/cart/${match.params.id}?qty=${qty}`);
-    };
-
-    const submitHandler = (e) => {
-        e.preventDefault();
-        dispatch(createProductReview(match.params.id, { rating, comment }));
     };
 
     return (

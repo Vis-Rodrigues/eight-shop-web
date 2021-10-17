@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, Container, Image } from 'react-bootstrap';
 // import { logout } from '../../actions/userActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Header.css';
+import logo from '../../assets/logo.png';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -19,20 +20,20 @@ const Header = () => {
 
     return (
         <header>
-            <Navbar expand='lg' className='ContainerHeader' collapseOnSelect>
+            <Navbar className='ContainerHeader' collapseOnSelect>
             {/* <Navbar bg='info' variant='info' expand='lg' collapseOnSelect> */}
                 <Container>
-                    <LinkContainer to='/'>
+                    <LinkContainer to='/' className='TopHeader'>
                         <Navbar.Brand className='TopHeader'>
-                        <FontAwesomeIcon icon={faShoppingCart} /> Eight Shop
+                        <Image src={logo} alt="Logo eight shop" fluid rounded className="logo-image" /> Eight Shop
                         </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Collapse id='basic-navbar-nav'>
                         <Nav className='ms-auto'>
                             <LinkContainer to='/cart'>
-                                <Nav.Link>
-                                    <FontAwesomeIcon icon={faShoppingCart} /> Carrinho
-                                </Nav.Link>
+                                <Nav.Link className="TopHeaderRight">
+                                     Carrinho <FontAwesomeIcon icon={faShoppingCart} />
+                                </Nav.Link> 
                             </LinkContainer>
                         </Nav>
                     </Navbar.Collapse>

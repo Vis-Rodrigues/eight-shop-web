@@ -1,5 +1,6 @@
 .ContainerHeader {
-    background: linear-gradient(to right, #1a8382, #4776e6);
+    background: linear-gradient(to right, #64ae11, #7bd515);
+    /* background:  #64ae11; */
     color: #ffffff;
     /* padding: 40px; */
 }
@@ -11,8 +12,15 @@
 
 .TopHeaderRight {
     color: #ffffff;
-    text-align: right;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 20px;
+    /* font-weight: bold; */
+    font-size: 25px;
+    /* padding: 20px; */
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: whitesmoke;
 }

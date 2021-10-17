@@ -34,6 +34,8 @@ const CartPage = ({ match, history, location }) => {
                 {cartItems.length === 0 ? (
                     <Message>
                         <h3 className='text-dark'>Ainda não possui item :(</h3>
+                            <h3 className='text-dark'>Por favor, escolha um produto</h3>
+
                         <Link className='btn btn-primary my-3' to='/'>
                             Voltar
                         </Link>
@@ -44,7 +46,7 @@ const CartPage = ({ match, history, location }) => {
                             <ListGroup.Item variant='flush' key={item.product}>
                                 <Row>
                                     <Col md={2}>
-                                        <Image src={item.image} alt={item.name} fluid rounded className="Cart-Image" />
+                                        <Image src={item.image} alt={item.name} fluid rounded className="cart-imagee" />
                                     </Col>
                                     <Col md={3}>
                                             {item.name}
