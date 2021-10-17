@@ -24,29 +24,9 @@ const App = () => {
             <Header />
             <main className='py-3'>
                 <Container>
-                    {/* <Route path='/orders/:id' component={OrderScreen} />
-                    <Route path='/shipping' component={ShippingScreen} />
-                    <Route path='/payment' component={PaymentScreen} />
-                    <Route path='/placeorder' component={PlaceOrderScreen} />
-                    <Route path='/login' component={LoginScreen} />
-                    <Route path='/register' component={RegisterScreen} />
-                    <Route path='/profile' component={ProfileScreen} /> */}
                     <Route path='/products/:id' component={ProductPage} />
                     <Route path='/search/:type' component={SearchProductPage} />
                     <Route path='/cart/:id?' component={CartPage} />
-                    {/* <Route path='/admin/userlist' component={UserListScreen} />
-                    <Route
-                        path='/admin/products/:id/edit'
-                        component={ProductEditScreen}
-                    />
-                    <Route
-                        path='/admin/productlist'
-                        component={ProductListScreen}
-                    />
-                    <Route
-                        path='/admin/orderlist'
-                        component={OrderListScreen}
-                    /> */}
                     <Route path='/' component={HomePage} exact />
                 </Container>
             </main>
