@@ -8,7 +8,7 @@ import Message from '../components/Message';
 import { listProducts } from '../actions/productActions';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const HomeScreen = () => {
+const HomePage = () => {
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.productList);
     const { loading, products, error } = productList;
@@ -62,4 +62,4 @@ const HomeScreen = () => {
     );
 };
 
-export default HomeScreen;
+export default HomePage;

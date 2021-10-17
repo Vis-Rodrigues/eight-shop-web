@@ -10,7 +10,7 @@ import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
-const ProductScreen = ({ match, history }) => {
+const ProductPage = ({ match, history }) => {
     const [qty, setQty] = useState(1);
     const [comment, setComment] = useState('');
     const [rating, setRating] = useState(1);
@@ -22,9 +22,6 @@ const ProductScreen = ({ match, history }) => {
 
     const productReviewCreate = useSelector((state) => state.productReviewCreate);
     const { success: successProductReview, error: errorProductReview } = productReviewCreate;
-
-    // const userLogin = useSelector((state) => state.userLogin);
-    // const { userInfo } = userLogin;
 
     useEffect(() => {
         if (successProductReview) {
@@ -89,26 +86,6 @@ const ProductScreen = ({ match, history }) => {
                                             <Col>{product.countInStock > 0 ? 'Em estoque' : 'Indisponível'}</Col>
                                         </Row>
                                     </ListGroup.Item>
-                                    {/* {product.countInStock > 0 && (
-                                        <ListGroup.Item>
-                                            <Row>
-                                                <Col>Quantity:</Col>
-                                                <Col>
-                                                    <Form.Control
-                                                        as='select'
-                                                        value={qty}
-                                                        onChange={(e) => setQty(e.target.value)}
-                                                    >
-                                                        {[...Array(product.countInStock).keys()].map((x) => (
-                                                            <option key={x + 1} value={x + 1}>
-                                                                {x + 1}
-                                                            </option>
-                                                        ))}
-                                                    </Form.Control>
-                                                </Col>
-                                            </Row>
-                                        </ListGroup.Item>
-                                    )} */}
                                     <ListGroup.Item className='d-grid'>
                                         <Button
                                             onClick={addToCartHandler}
@@ -123,60 +100,10 @@ const ProductScreen = ({ match, history }) => {
                             </Card>
                         </Col>
                     </Row>
-                    <Row>
-                        {/* <Col md={6}>
-                            <h2>REVIEWS</h2>
-                            <ListGroup variant='flush'>
-                                {product.reviews.length > 0 ? (
-                                    product.reviews.map((review) => (
-                                        <ListGroup.Item key={review._id}>
-                                            <strong>{review.name}</strong>
-                                            <Rating value={review.rating} />
-                                            <p>{review.createdAt.substring(0, 10)}</p>
-                                            <p>{review.comment}</p>
-                                        </ListGroup.Item>
-                                    ))
-                                ) : (
-                                    <Message variant='primary'>No reviews</Message>
-                                )}
-                                {errorProductReview && <Message variant='danger'>{errorProductReview}</Message>}
-                                {//userInfo && 
-                                (
-                                    <Form onSubmit={submitHandler}>
-                                        <Form.Group controldId='rating'>
-                                            <Form.Label>Rating</Form.Label>
-                                            <Form.Control
-                                                as='select'
-                                                value='rating'
-                                                onChange={(e) => setRating(e.target.value)}
-                                            >
-                                                <option value='1'>1 - Poor</option>
-                                                <option value='2'>2 - Fair</option>
-                                                <option value='3'>3 - Good</option>
-                                                <option value='4'>4 - Very Good</option>
-                                                <option value='5'>5 - Excellent</option>
-                                            </Form.Control>
-                                        </Form.Group>
-                                        <Form.Group controlId='comment'>
-                                            <Form.Label>Comment</Form.Label>
-                                            <Form.Control
-                                                as='textarea'
-                                                value={comment}
-                                                onChange={(e) => setComment(e.target.value)}
-                                            ></Form.Control>
-                                        </Form.Group>
-                                        <Button type='submit' variant='primary' className='mt-2'>
-                                            Submit
-                                        </Button>
-                                    </Form>
-                                )}
-                            </ListGroup>
-                        </Col> */}
-                    </Row>
                 </>
             )}
         </>
     );
 };
 
-export default ProductScreen;
+export default ProductPage;

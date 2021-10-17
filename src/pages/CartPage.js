@@ -5,7 +5,7 @@ import { Row, Col, Image, ListGroup, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 
-const CartScreen = ({ match, history, location }) => {
+const CartPage = ({ match, history, location }) => {
     const productId = match.params.id;
     const qty = location.search ? Number(location.search.split('=')[1]) : 1;
     const dispatch = useDispatch();
@@ -97,4 +97,4 @@ const CartScreen = ({ match, history, location }) => {
     );
 };
 
-export default CartScreen;
+export default CartPage;

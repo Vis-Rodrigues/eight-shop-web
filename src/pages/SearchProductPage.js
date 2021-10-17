@@ -26,31 +26,6 @@ const SearchProductPage = ({ match, history }) => {
                     <h2>Resultados para produtos {type}</h2>
                 </Col>
                 <Col>
-                    {/* <Button
-                                            type='button'
-                                            variant='success'
-                                            // onClick={() => removeFromCartHandler(item.product)}
-                                        >
-                                            vegano
-                                        </Button>
-                                
-            <Button
-                                            type='button'
-                                            variant='success'
-                                            // onClick={() => removeFromCartHandler(item.product)}
-                                        >
-                                            sem glúten
-                                        </Button>
-                           
-            <Button
-                                            type='button'
-                                            variant='success'
-                                            // onClick={() => removeFromCartHandler(item.product)}
-                                        >
-                                             vegetariano
-                                        </Button> */}
-
-                    {/* <Route path="/" render={() => <HomeScreen searchTerm="sem-gluten" />} /> */}
                     <LinkContainer to={`/`}>
                         <Button
                             variant='info' className='btn-sm mx-2'>
