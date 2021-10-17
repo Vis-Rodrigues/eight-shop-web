@@ -22,28 +22,28 @@ const HomeScreen = () => {
             <h1>LISTA DE PRODUTOS</h1>
             <Row className="App">
                 <Col>
-                <h2>Filtros rápidos</h2>
+                    <h2>Filtros rápidos</h2>
                 </Col>
                 <Col>
-                                    <LinkContainer to={`/search/vegan`}>
-                                        <Button
-                                            variant='success' className='btn-sm mx-2'>
-                                            Vegano
-                                        </Button>
-                                    </LinkContainer>
-                                    <LinkContainer to={`/search/vegetarian`}>
-                                        <Button
-                                            variant='success' className='btn-sm mx-2'>
-                                            Vegetariano
-                                        </Button>
-                                    </LinkContainer>
-                                    <LinkContainer to={`/search/sem-gluten`}>
-                                        <Button
-                                            variant='success' className='btn-sm mx-2'>
-                                            Sem Glúten
-                                        </Button>
-                                    </LinkContainer>
-                                        </Col>
+                    <LinkContainer to={`/search/vegan`}>
+                        <Button
+                            variant='success' className='btn-sm mx-2'>
+                            Vegano
+                        </Button>
+                    </LinkContainer>
+                    <LinkContainer to={`/search/vegetarian`}>
+                        <Button
+                            variant='success' className='btn-sm mx-2'>
+                            Vegetariano
+                        </Button>
+                    </LinkContainer>
+                    <LinkContainer to={`/search/sem-gluten`}>
+                        <Button
+                            variant='success' className='btn-sm mx-2'>
+                            Sem Glúten
+                        </Button>
+                    </LinkContainer>
+                </Col>
             </Row>
             {loading ? (
                 <Loader />

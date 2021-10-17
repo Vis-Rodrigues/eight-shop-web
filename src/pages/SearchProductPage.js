@@ -23,10 +23,10 @@ const SearchProductPage = ({ match, history }) => {
             <h1>LISTA DE PRODUTOS</h1>
             <Row className="App">
                 <Col>
-                <h2>Resultados para produtos {type}</h2>
+                    <h2>Resultados para produtos {type}</h2>
                 </Col>
                 <Col>
-            {/* <Button
+                    {/* <Button
                                             type='button'
                                             variant='success'
                                             // onClick={() => removeFromCartHandler(item.product)}
@@ -50,14 +50,14 @@ const SearchProductPage = ({ match, history }) => {
                                              vegetariano
                                         </Button> */}
 
-                                    {/* <Route path="/" render={() => <HomeScreen searchTerm="sem-gluten" />} /> */}
-                                    <LinkContainer to={`/`}>
-                                        <Button
-                                            variant='info' className='btn-sm mx-2'>
-                                            Limpar filtro
-                                        </Button>
-                                    </LinkContainer>
-                                        </Col>
+                    {/* <Route path="/" render={() => <HomeScreen searchTerm="sem-gluten" />} /> */}
+                    <LinkContainer to={`/`}>
+                        <Button
+                            variant='info' className='btn-sm mx-2'>
+                            Limpar filtro
+                        </Button>
+                    </LinkContainer>
+                </Col>
             </Row>
             {loading ? (
                 <Loader />

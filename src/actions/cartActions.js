@@ -8,7 +8,7 @@ import {
 } from '../constants/cartConstants';
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-    const { data } = await ApiEightShop.get(`/products/id/${id}`);
+    const { data } = await ApiEightShop.get(`/products/${id}`);
 
     dispatch({
         type: CART_ADD_ITEM,

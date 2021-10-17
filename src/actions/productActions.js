@@ -67,7 +67,7 @@ export const listProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-        const { data } = await ApiEightShop.get(`/products/id/${id}`);
+        const { data } = await ApiEightShop.get(`/products/${id}`);
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,

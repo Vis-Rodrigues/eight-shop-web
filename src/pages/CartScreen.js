@@ -44,7 +44,7 @@ const CartScreen = ({ match, history, location }) => {
                             <ListGroup.Item variant='flush' key={item.product}>
                                 <Row>
                                     <Col md={2}>
-                                        <Image src={item.image} alt={item.name} fluid rounded />
+                                        <Image src={item.image} alt={item.name} fluid rounded className="Cart-Image" />
                                     </Col>
                                     <Col md={3}>
                                             {item.name}
