@@ -1,20 +1,20 @@
 import React, {useState, useEffect, useRef} from 'react';
 import DialogView from './DialogView'
 
-const DialogController = () => {
-    const [isOpen, setIsOpen] = useState();
+const DialogController = ({value}) => {
+    console.log( "DialogController2: " + value.value);
+    const [isOpen, setIsOpen] = useState(value.value);
   
     const showModal = () => {
-      console.log("showModal")
       setIsOpen(true);
     };
   
     const hideModal = () => {
-      console.log("hideModal")
-      setIsOpen(false);
+      setIsOpen(!isOpen);
     };
   
     return (
+
         <DialogView
           show={isOpen}
           onHide={hideModal}

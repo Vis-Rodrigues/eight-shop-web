@@ -7,7 +7,7 @@ const DialogView = (props) => {
 
   return (
     <>
-      <button onClick={props.onClick}>Display Modal</button>
+      
       <Modal show={props.show} onHide={props.onHide}>
         <Modal.Header closeButton>
           <Modal.Title>Compra finalizada</Modal.Title>
