@@ -5,6 +5,12 @@ import { Col, Row, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './Home.css';
 
+import {
+    TYPE_VEGAN,
+    TYPE_VEGETARIAN,
+    TYPE_GLUTEN_FREE
+} from '../../constants/productConstants';
+
 const HomeView = props => {
     return (
         <Container>
@@ -14,19 +20,19 @@ const HomeView = props => {
                     <h2>Filtros rápidos</h2>
                 </Col>
                 <Col>
-                    <LinkContainer to={`/search/vegan`}>
+                    <LinkContainer to={`/search/${TYPE_VEGAN}`}>
                         <Button
                             variant='success' className='btn-md mx-6'>
                             Vegano
                         </Button>
                     </LinkContainer>
-                    <LinkContainer to={`/search/vegetarian`}>
+                    <LinkContainer to={`/search/${TYPE_VEGETARIAN}`}>
                         <Button
                             variant='success' className='btn-md mx-4'>
                             Vegetariano
                         </Button>
                     </LinkContainer>
-                    <LinkContainer to={`/search/sem-gluten`}>
+                    <LinkContainer to={`/search/${TYPE_GLUTEN_FREE}`}>
                         <Button
                             variant='success' className='btn-md mx-6'>
                             Sem Glúten
