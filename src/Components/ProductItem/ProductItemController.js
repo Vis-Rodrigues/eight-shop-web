@@ -4,14 +4,14 @@ import ProductItemView from "./ProductItemView";
 import Loader from "../Loader/Loader";
 
 const ProductItemController = ({ searchTerm }) => {
-  const { images, loading, runSearch } = useContext(PhotoContext);
+  const { products, loading, runSearch } = useContext(PhotoContext);
   useEffect(() => {
     runSearch(searchTerm);
   }, [searchTerm]);
   
   return (
     <div>
-      {loading ? <Loader /> : <ProductItemView data={images} />}
+      {loading ? <Loader /> : <ProductItemView data={products} />}
     </div>
   );
 };

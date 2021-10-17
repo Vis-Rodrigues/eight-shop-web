@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
+//Importa o store
+import store from './store/store';
+
+//Importa o Provider do React Redux
+import { Provider } from 'react-redux';
+
+//Importa o BroserRouter do react-router-dom
+import { BrowserRouter } from "react-router-dom";
+
 // import App from './App';
 import HomeController from './Pages/Home/HomeController'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HomeController />
+    <BrowserRouter>
+      {/* Adicionar o Provider com o store importado*/}
+      <Provider store={store}>
+        <HomeController />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
