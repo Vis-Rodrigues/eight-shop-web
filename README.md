@@ -1,82 +1,70 @@
-# Winkel Wagon (An eCommerce Platform)
+# Getting Started with Create React App
 
-To see the app in action, go to https://winkelwagon.herokuapp.com/
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> eCommerce platform built with the MERN stack & Redux
-![screenshot](https://github.com/thisisashish-02/Winkel-Wagon/blob/master/uploads/homepage.png)
-![screenshot](https://github.com/thisisashish-02/Winkel-Wagon/blob/master/uploads/orderscreen.png)
-![screenshot](https://github.com/thisisashish-02/Winkel-Wagon/blob/master/uploads/productscreen.png)
+## Available Scripts
 
-## Features
+In the project directory, you can run:
 
-- Full featured shopping cart
-- Product reviews and ratings
-- User profile with orders
-- Admin product management
-- Admin user management
-- Admin Order details page
-- Mark orders as delivered option
-- Checkout process (shipping, payment method, etc)
-- PayPal / credit card integration
-- Database seeder (products & users)
+### `npm start`
 
-### Libraries & Frameworks
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [mongoDB](https://www.mongodb.com/)
-- [express](https://expressjs.com/)
-- [react](https://reactjs.org/)
-- [node](https://nodejs.org/en/)
-- [react-router-dom](https://reactrouter.com/web/guides/quick-start)
-- [jwt](https://jwt.io/)
-- [mongoose](http://mongoosejs.com/)
-- [Heroku](https://www.heroku.com/)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Env Variables
+### `npm test`
 
-Create a .env file in the root and add the following
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-NODE_ENV = development
-PORT = 3005
-MONGO_URI = your mongodb uri
-JWT_SECRET = putYourSecret
-PAYPAL_CLIENT_ID = your paypal client id
-```
+### `npm run build`
 
-### Install Dependencies (frontend & backend)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-npm install
-cd frontend
-npm install
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Run
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```
-# Run frontend (:3000) & backend (:3005)
-npm run dev
-# Run backend only
-npm run server
-```
+### `npm run eject`
 
-## Build & Deploy
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```
-# Create frontend prod build
-cd frontend
-npm run build
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### Seed Database
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-You can use the following commands to seed the database with some sample users and products as well as destroy all data
+## Learn More
 
-```
-# Import data
-npm run data:import
-# Destroy data
-npm run data:destroy
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
