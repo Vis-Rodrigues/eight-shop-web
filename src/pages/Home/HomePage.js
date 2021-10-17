@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Route, Link } from "react-router-dom";
-import { Col, Row, Button } from 'react-bootstrap';
-import Product from '../../components/Product';
-import Loader from '../../components/Loader';
-import Message from '../../components/Message';
 import { listProducts } from '../../actions/productActions';
-import { LinkContainer } from 'react-router-bootstrap';
 import HomeView from './HomeView';
 
 const HomePage = () => {

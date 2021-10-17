@@ -1,4 +1,3 @@
-import axios from 'axios';
 import ApiEightShop from '../services/ApiEightShop';
 
 import {
@@ -8,18 +7,6 @@ import {
     PRODUCT_DETAILS_REQUEST,
     PRODUCT_DETAILS_SUCCESS,
     PRODUCT_DETAILS_FAIL,
-    PRODUCT_DELETE_REQUEST,
-    PRODUCT_DELETE_SUCCESS,
-    PRODUCT_DELETE_FAIL,
-    PRODUCT_CREATE_REQUEST,
-    PRODUCT_CREATE_SUCCESS,
-    PRODUCT_CREATE_FAIL,
-    PRODUCT_UPDATE_REQUEST,
-    PRODUCT_UPDATE_SUCCESS,
-    PRODUCT_UPDATE_FAIL,
-    PRODUCT_CREATE_REVIEW_REQUEST,
-    PRODUCT_CREATE_REVIEW_SUCCESS,
-    PRODUCT_CREATE_REVIEW_FAIL,
     TYPE_VEGAN,
     TYPE_VEGETARIAN,
     TYPE_GLUTEN_FREE
@@ -49,12 +36,12 @@ export const listProductsByType = (type) => async (dispatch) => {
     try {
         let queryString;
         dispatch({ type: PRODUCT_LIST_REQUEST });
-        if (type == TYPE_VEGAN){
+        if (type === TYPE_VEGAN) {
             queryString = 'isVegan=true'
-        } else if (type == TYPE_VEGETARIAN){
-        queryString = 'isVegetarian=true'
-        } else if (type == TYPE_GLUTEN_FREE){
-        queryString = 'isGlutenFree=true'
+        } else if (type === TYPE_VEGETARIAN) {
+            queryString = 'isVegetarian=true'
+        } else if (type === TYPE_GLUTEN_FREE) {
+            queryString = 'isGlutenFree=true'
         }
         console.log(queryString + 'querystring');
         const { data } = await ApiEightShop.get(`/products?${queryString}`);

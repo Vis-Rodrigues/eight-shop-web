@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col, Image, ListGroup, Form, Button, Card } from 'react-bootstrap';
+import { Row, Col, Image, ListGroup, Button, Card } from 'react-bootstrap';
 import Message from '../components/Message';
-import DialogController from '../components/Dialog/DialogController';
-import { addToCart, removeFromCart } from '../actions/cartActions';
+import { addToCart, removeFromCart,clearCart } from '../actions/cartActions';
 
 const CartPage = ({ match, history, location }) => {
 
-  const modal = { isOpen: false };
   const productId = match.params.id;
   const qty = location.search ? Number(location.search.split('=')[1]) : 1;
   const dispatch = useDispatch();
@@ -24,6 +22,12 @@ const CartPage = ({ match, history, location }) => {
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
+  };
+
+  const finalizerCart = () => {
+      console.log('chegou aqui cartPage');
+    dispatch(clearCart());
+    history.push('/');
   };
 
     return (
@@ -86,6 +90,7 @@ const CartPage = ({ match, history, location }) => {
                                 type='button'
                                 className='btn-success'
                                 disabled={cartItems.length === 0}
+                                onClick={() => finalizerCart()}
                             >
                                 FINALIZAR COMPRA
                             </Button>

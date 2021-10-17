@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import DialogView from './DialogView'
 
 const DialogController = ({value}) => {

@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Eight Shop",
+  "name": "Eight Shop",
+	"lang": "pt",
+	"description": "Aplicativo para comprar produtos veganos, vegetarios e sem glúten",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,14 +10,19 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "./logo-60x60.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "60x60"
     },
     {
-      "src": "logo512.png",
+      "src": "./logo-114x114.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "114x144"
+    },
+    {
+      "src": "./logo-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
