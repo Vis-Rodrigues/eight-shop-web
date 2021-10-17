@@ -1,0 +1,17 @@
+.filter-buuton {
+    background-color: white;
+    color:#1a8382;
+    border: 2px solid #1a8382; /* Green */
+    border-radius: 12px;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+
+.filter-buuton:hover {
+    background-color: #1a8382; /* Green */
+    color: white;
+}
