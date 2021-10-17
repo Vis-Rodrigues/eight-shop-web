@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HomeScreen from './pages/HomePage';
-import ProductScreen from './pages/ProductPage';
-import CartScreen from './pages/CartPage';
+import HomePage from './pages/Home/HomePage';
+import ProductPage from './pages/ProductPage';
+import CartPage from './pages/CartPage';
 // import LoginScreen from './pages/LoginScreen';
 // import RegisterScreen from './pages/RegisterScreen';
 // import ProfileScreen from './pages/ProfileScreen';
@@ -16,7 +16,7 @@ import CartScreen from './pages/CartPage';
 // import OrderListScreen from './pages/OrderListScreen';
 // import ProductListScreen from './pages/ProductListScreen';
 // import ProductEditScreen from './pages/ProductEditScreen';
-import SearchProductPage from './pages/SearchProductPage';
+import SearchProductPage from './pages/SearchProduct/SearchProductPage';
 
 const App = () => {
     return (
@@ -31,9 +31,9 @@ const App = () => {
                     <Route path='/login' component={LoginScreen} />
                     <Route path='/register' component={RegisterScreen} />
                     <Route path='/profile' component={ProfileScreen} /> */}
-                    <Route path='/products/:id' component={ProductScreen} />
+                    <Route path='/products/:id' component={ProductPage} />
                     <Route path='/search/:type' component={SearchProductPage} />
-                    <Route path='/cart/:id?' component={CartScreen} />
+                    <Route path='/cart/:id?' component={SearchProductPage} />
                     {/* <Route path='/admin/userlist' component={UserListScreen} />
                     <Route
                         path='/admin/products/:id/edit'
@@ -47,7 +47,7 @@ const App = () => {
                         path='/admin/orderlist'
                         component={OrderListScreen}
                     /> */}
-                    <Route path='/' component={HomeScreen} exact />
+                    <Route path='/' component={HomePage} exact />
                 </Container>
             </main>
             <Footer />
