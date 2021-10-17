@@ -10,13 +10,13 @@ import {
     productUpdateReducer,
 } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
-import {
-    userDetailsReducer,
-    userListReducer,
-    userLoginReducer,
-    userRegisterReducer,
-    userUpdateProfileReducer,
-} from './reducers/userReducers';
+// import {
+//     userDetailsReducer,
+//     userListReducer,
+//     userLoginReducer,
+//     userRegisterReducer,
+//     userUpdateProfileReducer,
+// } from './reducers/userReducers';
 import {
     orderCreateReducer,
     orderDeliverReducer,
@@ -33,11 +33,11 @@ const reducer = combineReducers({
     productUpdate: productUpdateReducer,
     productReviewCreate: productReviewCreateReducer,
     cart: cartReducer,
-    userLogin: userLoginReducer,
-    userRegister: userRegisterReducer,
-    userDetails: userDetailsReducer,
-    userUpdateProfile: userUpdateProfileReducer,
-    userList: userListReducer,
+    // userLogin: userLoginReducer,
+    // userRegister: userRegisterReducer,
+    // userDetails: userDetailsReducer,
+    // userUpdateProfile: userUpdateProfileReducer,
+    // userList: userListReducer,
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
     orderPay: orderPayReducer,
@@ -49,9 +49,9 @@ const cartItemsFromStorage = localStorage.getItem('cartItems')
     ? JSON.parse(localStorage.getItem('cartItems'))
     : [];
 
-const userInfoFromStorage = localStorage.getItem('userInfo')
-    ? JSON.parse(localStorage.getItem('userInfo'))
-    : null;
+// const userInfoFromStorage = localStorage.getItem('userInfo')
+//     ? JSON.parse(localStorage.getItem('userInfo'))
+//     : null;
 
 const shippingAddressFromStorage = localStorage.getItem('shippingAddress')
     ? JSON.parse(localStorage.getItem('shippingAddress'))
@@ -62,7 +62,7 @@ const initialState = {
         cartItems: cartItemsFromStorage,
         shippingAddress: shippingAddressFromStorage,
     },
-    userLogin: { userInfo: userInfoFromStorage },
+    // userLogin: { userInfo: userInfoFromStorage },
 };
 
 const middleware = [thunk];

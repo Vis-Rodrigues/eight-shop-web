@@ -32,15 +32,15 @@ const UserListScreen = ({ history, match }) => {
         product: createdProduct,
     } = productCreate;
 
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
+    // const userLogin = useSelector((state) => state.userLogin);
+    // const { userInfo } = userLogin;
 
     useEffect(() => {
         dispatch({ type: PRODUCT_CREATE_RESET });
 
-        if (!userInfo || !userInfo.isAdmin) {
-            history.push('/login');
-        }
+        // if (!userInfo || !userInfo.isAdmin) {
+        //     history.push('/login');
+        // }
 
         if (successCreate) {
             history.push(`/admin/products/${createdProduct._id}/edit`);
@@ -50,7 +50,7 @@ const UserListScreen = ({ history, match }) => {
     }, [
         dispatch,
         history,
-        userInfo,
+        // userInfo,
         successDelete,
         successCreate,
         createdProduct,

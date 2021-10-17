@@ -1,4 +1,5 @@
 import axios from 'axios';
+import ApiEightShop from '../services/ApiEightShop';
 import {
     CART_ADD_ITEM,
     CART_REMOVE_ITEM,
@@ -7,7 +8,7 @@ import {
 } from '../constants/cartConstants';
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await ApiEightShop.get(`/products/id/${id}`);
 
     dispatch({
         type: CART_ADD_ITEM,

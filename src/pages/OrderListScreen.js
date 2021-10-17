@@ -12,16 +12,16 @@ const OrderListScreen = ({ history }) => {
     const orderList = useSelector((state) => state.orderList);
     const { loading, orders, error } = orderList;
 
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
+    // const userLogin = useSelector((state) => state.userLogin);
+    // const { userInfo } = userLogin;
 
-    useEffect(() => {
-        if (userInfo && userInfo.isAdmin) {
-            dispatch(listOrders());
-        } else {
-            history.push('/');
-        }
-    }, [dispatch, history, userInfo]);
+    // useEffect(() => {
+    //     if (userInfo && userInfo.isAdmin) {
+    //         dispatch(listOrders());
+    //     } else {
+    //         history.push('/');
+    //     }
+    // }, [dispatch, history, userInfo]);
 
     return (
         <>
@@ -35,7 +35,7 @@ const OrderListScreen = ({ history }) => {
                     <thead>
                         <tr>
                             <td>ID</td>
-                            <td>USER</td>
+                            {/* <td>USER</td> */}
                             <td>DATE</td>
                             <td>TOTAL</td>
                             <td>PAID</td>
@@ -46,7 +46,7 @@ const OrderListScreen = ({ history }) => {
                         {orders.map((order) => (
                             <tr key={order._id}>
                                 <td>{order._id}</td>
-                                <td>{order.user.name}</td>
+                                {/* <td>{order.user.name}</td> */}
                                 <td>{order.createdAt.substring(0, 10)}</td>
                                 <td>{order.totalPrice}</td>
                                 <td>

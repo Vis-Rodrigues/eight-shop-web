@@ -1,0 +1,14 @@
+.ContainerFooter{
+    background-color: #282c34;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.TextFooter{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

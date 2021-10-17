@@ -30,12 +30,12 @@ const CartScreen = ({ match, history, location }) => {
     return (
         <Row>
             <Col md={8}>
-                <h1>SHOPPING CART</h1>
+                <h1>Carrinho de compras</h1>
                 {cartItems.length === 0 ? (
                     <Message>
-                        <h3 className='text-dark'>Your cart is empty</h3>
+                        <h3 className='text-dark'>Ainda não possui item :(</h3>
                         <Link className='btn btn-primary my-3' to='/'>
-                            GO BACK
+                            Voltar
                         </Link>
                     </Message>
                 ) : (
@@ -107,7 +107,7 @@ const CartScreen = ({ match, history, location }) => {
                                 disabled={cartItems.length === 0}
                                 onClick={checkoutHandler}
                             >
-                                PROCEED TO CHECKOUT
+                                FINALIZAR COMPRA
                             </Button>
                         </ListGroup.Item>
                     </ListGroup>

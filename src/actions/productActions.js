@@ -25,7 +25,6 @@ import {
 export const listProducts = () => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST });
-        console.log("Teste");
         const { data } = await ApiEightShop.get('/products');
 
         dispatch({
@@ -69,12 +68,12 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
         dispatch({ type: PRODUCT_DELETE_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 
@@ -99,13 +98,13 @@ export const createProduct = () => async (dispatch, getState) => {
         dispatch({ type: PRODUCT_CREATE_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
                 'Content-type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 
@@ -131,13 +130,13 @@ export const updateProduct = (product) => async (dispatch, getState) => {
         dispatch({ type: PRODUCT_UPDATE_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            // userLogin: { userInfo },
         } = getState();
 
         const config = {
             headers: {
                 'Content-type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
+                // Authorization: `Bearer ${userInfo.token}`,
             },
         };
 
@@ -168,13 +167,13 @@ export const createProductReview =
             dispatch({ type: PRODUCT_CREATE_REVIEW_REQUEST });
 
             const {
-                userLogin: { userInfo },
+                // userLogin: { userInfo },
             } = getState();
 
             const config = {
                 headers: {
                     'Content-type': 'application/json',
-                    Authorization: `Bearer ${userInfo.token}`,
+                    // Authorization: `Bearer ${userInfo.token}`,
                 },
             };
 
