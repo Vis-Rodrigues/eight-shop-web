@@ -7,9 +7,6 @@ import DialogController from '../components/Dialog/DialogController';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 
 const CartPage = ({ match, history, location }) => {
-    const productId = match.params.id;
-    const qty = location.search ? Number(location.search.split('=')[1]) : 1;
-    const dispatch = useDispatch();
 
   const modal = { isOpen: false };
   const productId = match.params.id;
@@ -89,7 +86,6 @@ const CartPage = ({ match, history, location }) => {
                                 type='button'
                                 className='btn-success'
                                 disabled={cartItems.length === 0}
-                                onClick={checkoutHandler}
                             >
                                 FINALIZAR COMPRA
                             </Button>
