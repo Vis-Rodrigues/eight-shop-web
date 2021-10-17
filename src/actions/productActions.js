@@ -42,6 +42,27 @@ export const listProducts = () => async (dispatch) => {
     }
 };
 
+export const listProductsByType = (type) => async (dispatch) => {
+    console.log('entrou list2')
+    try {
+        dispatch({ type: PRODUCT_LIST_REQUEST });
+        const { data } = await ApiEightShop.get('/products?isVegan=true');
+
+        dispatch({
+            type: PRODUCT_LIST_SUCCESS,
+            payload: data,
+        });
+    } catch (error) {
+        dispatch({
+            type: PRODUCT_LIST_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
+    }
+};
+
 export const listProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST });

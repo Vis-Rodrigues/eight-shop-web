@@ -16,6 +16,7 @@ import UserListScreen from './pages/UserListScreen';
 import OrderListScreen from './pages/OrderListScreen';
 import ProductListScreen from './pages/ProductListScreen';
 import ProductEditScreen from './pages/ProductEditScreen';
+import SearchProductPage from './pages/SearchProductPage';
 
 const App = () => {
     return (
@@ -31,6 +32,7 @@ const App = () => {
                     <Route path='/register' component={RegisterScreen} />
                     <Route path='/profile' component={ProfileScreen} />
                     <Route path='/products/:id' component={ProductScreen} />
+                    <Route path='/search/:type' component={SearchProductPage} />
                     <Route path='/cart/:id?' component={CartScreen} />
                     <Route path='/admin/userlist' component={UserListScreen} />
                     <Route
