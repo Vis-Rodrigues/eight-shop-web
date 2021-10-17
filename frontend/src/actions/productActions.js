@@ -1,4 +1,5 @@
 import axios from 'axios';
+import ApiEightShop from '../services/ApiEightShop';
 
 import {
     PRODUCT_LIST_SUCCESS,
@@ -24,8 +25,8 @@ import {
 export const listProducts = () => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST });
-
-        const { data } = await axios.get('/api/products');
+        console.log("Teste");
+        const { data } = await ApiEightShop.get('/products');
 
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
@@ -46,7 +47,7 @@ export const listProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-        const { data } = await axios.get(`/api/products/${id}`);
+        const { data } = await ApiEightShop.get(`/products/id/${id}`);
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
