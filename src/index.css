@@ -26,23 +26,7 @@ h2 {
     object-fit: cover;
 }
 
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
-
 .img-fluid {
     width: 100%;
     height: 20vw;
-}
-
-.cart-imagee {
-    width: 100%;
-    height: 5vw;
-}
-
-.logo-image {
-    width: 3vw;
-    height: 3vw;
 }

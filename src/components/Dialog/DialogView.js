@@ -1,6 +1,4 @@
 import React from 'react';
-import { clearCart } from '../../actions/cartActions';
-import { useDispatch } from 'react-redux';
 //Importa os Componentes do BootStrap 
 import { Button, Modal } from 'react-bootstrap';
 
@@ -20,7 +18,6 @@ const DialogView = (props) => {
           Seus itens estão sendo preparados e logo serão entregues. =D
         </Modal.Body>
         <Modal.Footer>
-          {/* <Button variant="success" onClick={props.onHide}>OK</Button> */}
           <Button variant="success" onClick={props.onHide}>OK</Button>
         </Modal.Footer>
       </Modal>

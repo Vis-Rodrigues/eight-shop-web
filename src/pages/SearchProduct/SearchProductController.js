@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listProductsByType } from '../../actions/productActions';
 import SearchProductView from './SearchProductView';
 
-const SearchProductPage = ({ match, history }) => {
+const SearchProductController = ({ match, history }) => {
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.productList);
     const type = match.params.type;
@@ -17,4 +17,4 @@ const SearchProductPage = ({ match, history }) => {
     );
 };
 
-export default SearchProductPage;
+export default SearchProductController;

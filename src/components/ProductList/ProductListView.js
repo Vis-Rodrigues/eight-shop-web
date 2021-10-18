@@ -1,9 +1,8 @@
 import React from 'react';
-import { Col, Row, Button } from 'react-bootstrap';
-import Product from '../Product';
+import { Col, Row } from 'react-bootstrap';
+import Product from '../Product/Product';
 import Loader from '../Loader';
 import Message from '../Message';
-import { LinkContainer } from 'react-router-bootstrap';
 
 const ProductListView = (props) => {
 

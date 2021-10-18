@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../../actions/productActions';
 import HomeView from './HomeView';
 
-const HomePage = () => {
+const HomeController = () => {
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.productList);
 
@@ -16,4 +16,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default HomeController;

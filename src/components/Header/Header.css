@@ -12,9 +12,7 @@
 
 .TopHeaderRight {
     color: #ffffff;
-    /* font-weight: bold; */
     font-size: 25px;
-    /* padding: 20px; */
 }
 
 .navbar-light .navbar-brand {
@@ -23,4 +21,9 @@
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
     color: whitesmoke;
+}
+
+.logo-image {
+    width: 3vw;
+    height: 3vw;
 }

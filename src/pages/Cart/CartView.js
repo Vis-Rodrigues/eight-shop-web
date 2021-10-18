@@ -1,43 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { Link, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col, Image, ListGroup, Form, Button, Card } from 'react-bootstrap';
-import Message from '../components/Message';
-import { addToCart, removeFromCart, cleanCart } from '../actions/cartActions';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Row, Col, Image, ListGroup, Button, Card } from 'react-bootstrap';
+import Message from '../../components/Message';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-import DialogView from '../components/Dialog/DialogView';
-import { clearCart } from '../actions/cartActions';
+import DialogView from '../../components/Dialog/DialogView';
+import './Cart.css';
 
-const CartPage = ({ match, history, location }) => {
+const CartView = (props) => {
 
-    const productId = match.params.id;
-    const qty = location.search ? Number(location.search.split('=')[1]) : 1;
-    const dispatch = useDispatch();
-
-    const cart = useSelector((state) => state.cart);
-    const { cartItems } = cart;
-
-    useEffect(() => {
-        if (productId) {
-            dispatch(addToCart(productId, qty));
-        }
-    }, [productId, dispatch, qty]);
-
-    const removeFromCartHandler = (id) => {
-        dispatch(removeFromCart(id));
-    };
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleModal = () => {
-        setIsOpen(!isOpen);
-        finalizerCart();
-    };
-
-    const finalizerCart = () => {
-      dispatch(clearCart());
-    };
+    const { cartItems } = props.cart;
 
     return (
         <Row>
@@ -70,7 +42,7 @@ const CartPage = ({ match, history, location }) => {
                                         <Button
                                             type='button'
                                             variant='light'
-                                            onClick={() => removeFromCartHandler(item.product)}
+                                            onClick={() => props.removeFromCartHandler(item.product)}
                                         >
                                             <i className='fas fa-trash' />
                                         </Button>
@@ -102,12 +74,12 @@ const CartPage = ({ match, history, location }) => {
                                 type='button'
                                 className='btn-success'
                                 disabled={cartItems.length === 0}
-                                onClick={toggleModal}
+                                onClick={props.toggleModal}
                             >
                                 FINALIZAR COMPRA
                             </Button>
-                            <DialogView show={isOpen}
-                                onHide={toggleModal}>
+                            <DialogView show={props.isOpen}
+                                onHide={props.toggleModal}>
                             </DialogView>
                         </ListGroup.Item>
                     </ListGroup>
@@ -117,4 +89,4 @@ const CartPage = ({ match, history, location }) => {
     );
 };
 
-export default CartPage;
+export default CartView;
