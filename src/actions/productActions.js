@@ -20,6 +20,9 @@ import {
     PRODUCT_CREATE_REVIEW_REQUEST,
     PRODUCT_CREATE_REVIEW_SUCCESS,
     PRODUCT_CREATE_REVIEW_FAIL,
+    TYPE_VEGAN,
+    TYPE_VEGETARIAN,
+    TYPE_GLUTEN_FREE
 } from '../constants/productConstants';
 
 export const listProducts = () => async (dispatch) => {
@@ -44,8 +47,17 @@ export const listProducts = () => async (dispatch) => {
 
 export const listProductsByType = (type) => async (dispatch) => {
     try {
+        let queryString;
         dispatch({ type: PRODUCT_LIST_REQUEST });
-        const { data } = await ApiEightShop.get('/products?isVegan=true');
+        if (type == TYPE_VEGAN){
+            queryString = 'isVegan=true'
+        } else if (type == TYPE_VEGETARIAN){
+        queryString = 'isVegetarian=true'
+        } else if (type == TYPE_GLUTEN_FREE){
+        queryString = 'isGlutenFree=true'
+        }
+        console.log(queryString + 'querystring');
+        const { data } = await ApiEightShop.get(`/products?${queryString}`);
 
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
