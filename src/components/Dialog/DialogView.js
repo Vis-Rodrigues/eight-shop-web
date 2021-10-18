@@ -1,10 +1,7 @@
 import React from 'react';
-//Importa os Componentes do BootStrap 
 import { Button, Modal } from 'react-bootstrap';
 
 const DialogView = (props) => {
-  
-
 
   return (
     <>

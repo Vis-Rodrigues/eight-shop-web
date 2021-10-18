@@ -1,4 +1,3 @@
-//Importa a biblioteca Axios
 import axios from 'axios';
 
 const ApiEightShop = axios.create({
